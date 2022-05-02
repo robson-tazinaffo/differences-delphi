@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/05/01 02:54:46.000.221,=C:\Users\Robson\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/05/01 03:00:02.000.130,C:\univesp\PI II\Jogos\Delphi\Meus\Teste 01\uInicial.fmx=C:\Users\Robson\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2022/05/01 03:00:02.000.130,C:\univesp\PI II\Jogos\Delphi\Meus\Teste 01\uInicial.pas=C:\Users\Robson\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/05/01 03:00:30.000.492,C:\univesp\PI II\Jogos\Delphi\Meus\Teste 01\Seteerros.dproj=C:\Users\Robson\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/05/01 03:07:52.000.150,=C:\univesp\PI II\Jogos\Delphi\Meus\Teste 01\Unit1.pas</Transaction>
+    <Transaction>2022/05/01 03:08:17.000.599,C:\univesp\PI II\Jogos\Delphi\Meus\Teste 01\classes\uGlobal.pas=C:\univesp\PI II\Jogos\Delphi\Meus\Teste 01\Unit1.pas</Transaction>
+    <Transaction>2022/05/01 03:11:14.000.907,=C:\univesp\PI II\Jogos\Delphi\Meus\Teste 01\classes\Globais.pas</Transaction>
+    <Transaction>2022/05/01 03:29:35.000.308,=C:\univesp\PI II\Jogos\Delphi\Meus\Teste 01\Unit1.pas</Transaction>
+    <Transaction>2022/05/01 03:32:58.000.848,C:\univesp\PI II\Jogos\Delphi\Meus\Teste 01\uPrincipal.fmx=C:\univesp\PI II\Jogos\Delphi\Meus\Teste 01\Unit1.fmx</Transaction>
+    <Transaction>2022/05/01 03:32:58.000.848,C:\univesp\PI II\Jogos\Delphi\Meus\Teste 01\uPrincipal.pas=C:\univesp\PI II\Jogos\Delphi\Meus\Teste 01\Unit1.pas</Transaction>
+    <Transaction>2022/05/01 04:25:26.000.058,=C:\univesp\PI II\Jogos\Delphi\Meus\Teste 01\Unit1.pas</Transaction>
+    <Transaction>2022/05/01 04:26:34.000.853,C:\univesp\PI II\Jogos\Delphi\Meus\Teste 01\uTela02.fmx=C:\univesp\PI II\Jogos\Delphi\Meus\Teste 01\Unit1.fmx</Transaction>
+    <Transaction>2022/05/01 04:26:34.000.853,C:\univesp\PI II\Jogos\Delphi\Meus\Teste 01\uTela02.pas=C:\univesp\PI II\Jogos\Delphi\Meus\Teste 01\Unit1.pas</Transaction>
+    <Transaction>2022/05/01 05:54:46.000.305,=C:\univesp\PI II\Jogos\Delphi\Meus\Teste 01\classes\uPermissions.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android64="" Android=""/>
+	</ActiveMobileDevice>
+</BorlandProject>
