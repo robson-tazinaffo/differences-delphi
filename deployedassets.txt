@@ -1,4 +1,0 @@
-.\assets\internal\aplausos.mp3
-.\assets\internal\AndroidManifest.xml
-.\assets\internal\erro.wav
-.\assets\internal\fundo.mp3

@@ -90,7 +90,8 @@ begin
        {$IFDEF MSWINDOWS}
        MediaPlayerErro.Play;
        {$ENDIF}
-       lblCursor.Text := 'Erro - Posição: ' + 'X: ' + trunc(oImage.Position.X).ToString + '  Y: ' + trunc(oImage.Position.Y).ToString;
+//       lblCursor.Text := 'Erro - Posição: ' + 'X: ' + trunc(oImage.Position.X).ToString + '  Y: ' + trunc(oImage.Position.Y).ToString;
+       lblCursor.Text := '(: Tente novamente!';
     end;
 
     if (tag > 0) and (tag < 99) then
@@ -101,7 +102,8 @@ begin
         MediaPlayerAcerto.Play;
        {$ENDIF}
         oCircle.Stroke.Thickness := 3;
-       lblCursor.Text := 'Acerto - Posição: ' + 'X: ' + trunc(oCircle.Position.X).ToString + '  Y: ' + trunc(oCircle.Position.Y).ToString;
+//       lblCursor.Text := 'Acerto - Posição: ' + 'X: ' + trunc(oCircle.Position.X).ToString + '  Y: ' + trunc(oCircle.Position.Y).ToString;
+       lblCursor.Text := ':( Parabéns, você acertou. Faltam ' + ( 5 - pontoIni).ToString + ' pontos'  ;
     end;
 
 
@@ -115,6 +117,7 @@ begin
         MediaPlayerfundo.Stop;
         Sleep(100);
         Timer1.Enabled := false;
+        lblCursor.Text := 'Parabéns! Você completou o desafio';
     end;
 
 

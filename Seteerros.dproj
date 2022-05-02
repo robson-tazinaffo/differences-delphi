@@ -1,11 +1,11 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{01D91AAD-3602-477D-86F8-CB830285B746}</ProjectGuid>
+        <ProjectGuid>{6B8AE563-927C-47F4-8ABE-48C3AFC36125}</ProjectGuid>
         <ProjectVersion>19.2</ProjectVersion>
         <FrameworkType>FMX</FrameworkType>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
-        <Platform Condition="'$(Platform)'==''">Win64</Platform>
+        <Platform Condition="'$(Platform)'==''">Android64</Platform>
         <TargetedPlatforms>33819</TargetedPlatforms>
         <AppType>Application</AppType>
         <MainSource>Seteerros.dpr</MainSource>
@@ -234,7 +234,6 @@
         <DCC_RemoteDebug>true</DCC_RemoteDebug>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Android64)'!=''">
-        <EL_SecureFileSharing>true</EL_SecureFileSharing>
         <VerInfo_Build>1</VerInfo_Build>
         <Android_NotificationAccentColor>#000000</Android_NotificationAccentColor>
     </PropertyGroup>
@@ -242,8 +241,6 @@
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
@@ -271,7 +268,6 @@
             <Form>F_Inicio</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="classes\Globais.pas"/>
         <DCCReference Include="uPrincipal.pas">
             <Form>F_TelaJogo</Form>
             <FormType>fmx</FormType>
@@ -280,6 +276,7 @@
             <Form>F_Tela02</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="classes\Globais.pas"/>
         <DCCReference Include="classes\uPermissions.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
@@ -344,13 +341,6 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="audios\aplausos.mp3" Configuration="Debug" Class="File">
-                    <Platform Name="Android64">
-                        <RemoteDir>.\assets\internal\</RemoteDir>
-                        <RemoteName>aplausos.mp3</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_SplashImage_640x480.png" Configuration="Debug" Class="Android_SplashImage640">
                     <Platform Name="Android64">
                         <RemoteName>splash_image.png</RemoteName>
@@ -372,6 +362,12 @@
                 <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_SplashImage_470x320.png" Configuration="Debug" Class="Android_SplashImage470">
                     <Platform Name="Android64">
                         <RemoteName>splash_image.png</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Win32\Debug\Seteerros.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>Seteerros.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -406,18 +402,17 @@
                 </DeployFile>
                 <DeployFile LocalName="Android64\Debug\AndroidManifest.xml" Configuration="Debug" Class="ProjectAndroidManifest">
                     <Platform Name="Android64">
-                        <RemoteDir>.\assets\internal\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Android64\Debug\styles.xml" Configuration="Debug" Class="AndroidSplashStyles">
+                    <Platform Name="Android64">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_24x24.png" Configuration="Debug" Class="Android_NotificationIcon24">
                     <Platform Name="Android64">
                         <RemoteName>ic_notification.png</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="Android64\Debug\styles.xml" Configuration="Debug" Class="AndroidSplashStyles">
-                    <Platform Name="Android64">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -460,20 +455,8 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="Android64\Debug\provider_paths.xml" Configuration="Debug" Class="AndroidFileProvider">
-                    <Platform Name="Android64">
-                        <RemoteName>provider_paths.xml</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
                 <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
                     <Platform Name="OSX32">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="Win32\Debug\Seteerros.exe" Configuration="Debug" Class="ProjectOutput">
-                    <Platform Name="Win32">
-                        <RemoteName>Seteerros.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -483,22 +466,9 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="audios\sound.wav" Configuration="Debug" Class="File">
-                    <Platform Name="Android64">
-                        <RemoteName>sound.wav</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
                 <DeployFile LocalName="Android64\Debug\libSeteerros.so" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Android64">
                         <RemoteName>libSeteerros.so</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="audios\erro.wav" Configuration="Debug" Class="File">
-                    <Platform Name="Android64">
-                        <RemoteDir>.\assets\internal\</RemoteDir>
-                        <RemoteName>erro.wav</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -510,13 +480,6 @@
                 </DeployFile>
                 <DeployFile LocalName="Android64\Debug\strings.xml" Configuration="Debug" Class="Android_Strings">
                     <Platform Name="Android64">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="audios\fundo.mp3" Configuration="Debug" Class="File">
-                    <Platform Name="Android64">
-                        <RemoteDir>.\assets\internal\</RemoteDir>
-                        <RemoteName>fundo.mp3</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -1294,8 +1257,11 @@
             <Platforms>
                 <Platform value="Android">True</Platform>
                 <Platform value="Android64">True</Platform>
+                <Platform value="iOSDevice32">False</Platform>
                 <Platform value="iOSDevice64">True</Platform>
                 <Platform value="iOSSimulator">True</Platform>
+                <Platform value="OSX32">False</Platform>
+                <Platform value="OSX64">False</Platform>
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">True</Platform>
             </Platforms>

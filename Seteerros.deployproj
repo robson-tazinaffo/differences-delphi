@@ -23,80 +23,7 @@
             <Required>True</Required>
         </DeployFile>
     </ItemGroup>
-    <ItemGroup Condition="'$(Platform)'=='Android'">
-        <DeployFile Include="audios\fundo.mp3" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>Seteerros\assets\internal\</RemoteDir>
-            <RemoteName>fundo.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="audios\erro.wav" Condition="'$(Config)'=='Release'">
-            <RemoteDir>Seteerros\assets\internal\</RemoteDir>
-            <RemoteName>erro.wav</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="audios\fundo.mp3" Condition="'$(Config)'=='Release'">
-            <RemoteDir>Seteerros\assets\internal\</RemoteDir>
-            <RemoteName>fundo.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="audios\erro.wav" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>Seteerros\assets\internal\</RemoteDir>
-            <RemoteName>erro.wav</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="audios\acerto.wav" Condition="'$(Config)'=='Release'">
-            <RemoteDir>Seteerros\assets\internal\</RemoteDir>
-            <RemoteName>acerto.wav</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="audios\aplausos.mp3" Condition="'$(Config)'=='Release'">
-            <RemoteDir>Seteerros\assets\internal\</RemoteDir>
-            <RemoteName>aplausos.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="audios\aplausos.mp3" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>Seteerros\assets\internal\</RemoteDir>
-            <RemoteName>aplausos.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="audios\acerto.wav" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>Seteerros\assets\internal\</RemoteDir>
-            <RemoteName>acerto.wav</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Android'"/>
     <ItemGroup Condition="'$(Platform)'=='iOSSimulator'">
         <DeployFile Include="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib">
             <RemoteDir>Seteerros.app\</RemoteDir>
@@ -159,15 +86,6 @@
             <RemoteName>ic_notification.png</RemoteName>
             <DeployClass>Android_NotificationIcon96</DeployClass>
             <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="audios\aplausos.mp3" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>Seteerros\assets\internal\</RemoteDir>
-            <RemoteName>aplausos.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -272,7 +190,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="Android64\Debug\AndroidManifest.xml" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>Seteerros\assets\internal\</RemoteDir>
+            <RemoteDir>Seteerros\</RemoteDir>
             <RemoteName>AndroidManifest.xml</RemoteName>
             <DeployClass>ProjectAndroidManifest</DeployClass>
             <Operation>1</Operation>
@@ -325,29 +243,11 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Android64\Debug\provider_paths.xml" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>Seteerros\res\xml\</RemoteDir>
-            <RemoteName>provider_paths.xml</RemoteName>
-            <DeployClass>AndroidFileProvider</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_426x320.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>Seteerros\res\drawable-small\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage426</DeployClass>
             <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="audios\sound.wav" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>Seteerros\</RemoteDir>
-            <RemoteName>sound.wav</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -361,15 +261,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
             <Required>True</Required>
-        </DeployFile>
-        <DeployFile Include="audios\erro.wav" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>Seteerros\assets\internal\</RemoteDir>
-            <RemoteName>erro.wav</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="Android64\Debug\styles-v21.xml" Condition="'$(Config)'=='Debug'">
             <RemoteDir>Seteerros\res\values-v21\</RemoteDir>
@@ -385,15 +276,6 @@
             <RemoteName>strings.xml</RemoteName>
             <DeployClass>Android_Strings</DeployClass>
             <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="audios\fundo.mp3" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>Seteerros\assets\internal\</RemoteDir>
-            <RemoteName>fundo.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
