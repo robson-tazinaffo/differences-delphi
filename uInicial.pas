@@ -14,10 +14,19 @@ type
     Label1: TLabel;
     Image2: TImage;
     Image3: TImage;
-    Image4: TImage;
     Image1: TImage;
+    Layout1: TLayout;
+    Rectangle1: TRectangle;
+    Label2: TLabel;
+    Image4: TImage;
+    Image5: TImage;
+    imgAudioOn: TImage;
+    imgAudioOff: TImage;
+    lytHeader: TLayout;
+    imgAudio: TImage;
     procedure Label1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure imgAudioClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,7 +40,7 @@ implementation
 
 {$R *.fmx}
 
-uses Globais, uPrincipal, uPermissions;
+uses Globais, uPermissions, uEscolhaTelas;
 
 
 procedure TF_Inicio.FormCreate(Sender: TObject);
@@ -47,15 +56,31 @@ begin
     );
     {$ENDIF}
 
+    DesabilitaAudio    := false;
+
+
+end;
+
+procedure TF_Inicio.imgAudioClick(Sender: TObject);
+begin
+    if DesabilitaAudio = false then
+    begin
+        imgAudio.Bitmap := imgAudioOff.Bitmap;
+        DesabilitaAudio := true;
+    end else if DesabilitaAudio = true then
+    begin
+        imgAudio.Bitmap := imgAudioOn.Bitmap;
+        DesabilitaAudio := false;
+    end;
 end;
 
 procedure TF_Inicio.Label1Click(Sender: TObject);
 begin
     try
-        F_TelaJogo := TF_TelaJogo.Create(self);
-        F_TelaJogo.Show;
+        F_EscolhaTelas := TF_EscolhaTelas.Create(self);
+        F_EscolhaTelas.Show;
     finally
-//        F_TelaJogo.DisposeOf;
+//        F_EscolhaTelas.DisposeOf;
     end;
 
 end;

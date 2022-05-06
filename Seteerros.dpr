@@ -4,10 +4,11 @@ uses
   System.StartUpCopy,
   FMX.Forms,
   uInicial in 'uInicial.pas' {F_Inicio},
-  uPrincipal in 'uPrincipal.pas' {F_TelaJogo},
+  uTelaJogo01 in 'uTelaJogo01.pas' {F_TelaJogo},
   uTela02 in 'uTela02.pas' {F_Tela02},
   Globais in 'classes\Globais.pas',
-  uPermissions in 'classes\uPermissions.pas';
+  uPermissions in 'classes\uPermissions.pas',
+  uEscolhaTelas in 'uEscolhaTelas.pas' {F_EscolhaTelas};
 
 {$R *.res}
 

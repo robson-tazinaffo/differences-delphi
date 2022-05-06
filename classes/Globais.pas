@@ -6,6 +6,7 @@ var
     StatusBarColor : Cardinal;
     StatusBarTransparent : Boolean;
     ModoDark : boolean;
+    DesabilitaAudio : boolean;
 
     V_USERID: Integer;
     V_USUARIO: String;
